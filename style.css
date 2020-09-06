@@ -1,0 +1,202 @@
+  :root{
+    --link : #d5f1f8;
+    --link_active: #fdfdfd;
+    --accent1: #e49797;
+    --accent2: #6a94e9;
+    --accent3: #4777f3;
+    --accent4: #e0777c;
+    --btn-primary: #1d5bd6;
+    --btn-secondary: #e96a70;
+    --text-primary: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;    
+    background: linear-gradient(90deg, #4777f3, #cfcfd6);
+    height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6, p{
+    color: var(--text-primary);
+  }
+
+  .App{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;    
+    width: 90vw;
+    height: 95vh;
+  }
+
+  .form{
+    display: flex;    
+    justify-content: flex-end;    
+    width: 100%;
+    height: 85vh;    
+  }
+
+  .form-elements{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;    
+    background:linear-gradient(135deg, var(--accent3), var(--accent4));    
+    border: 1px solid white
+  }
+
+  .sub-heading{
+    display: flex;
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    padding: 1em;
+    background: var(--accent3);
+    border: 1px solid white;
+  }
+
+  .NavBar{
+    display: flex;
+    position: fixed;
+    top: 0;    
+  }
+
+  input{
+    width: 50%;
+    padding: 0.5em;
+    margin: 0.5em 1em;
+    border-radius: 0.5em;
+    border: none;    
+  }
+
+  input:focus{
+    outline: none;
+  }
+
+  button{
+    padding: 0.5em 1.5em;
+    background-color: var(--btn-primary);
+    color: var(--text-primary);
+    font-size: medium;
+    border-radius: 0.6em;
+    border: none;
+    cursor: pointer;
+    margin: 1em;
+    width: fit-content;
+  }
+
+  @media screen and (max-width: 345px){
+    body{
+      font-size: 0.7em;
+    }
+
+    .form{
+      justify-content: center;
+    }
+
+    .form-elements{
+      top: 5vh;
+      width: 100vw;      
+    }
+
+    input, button{      
+      margin-left: auto;
+      margin-right: auto;      
+    }
+
+    .sub-heading{
+      align-self: center;
+      border-radius: 1em;
+      top: 5vh;      
+    }
+
+    input{
+      width: 70%;
+    }
+    
+    .main-img{
+      display: none;
+    }
+    
+  }
+
+  @media only screen and (min-width: 346px)
+  {
+    body{
+      font-size: 0.9em;
+    }
+
+    .form{
+      justify-content: center;
+    }
+
+    .form-elements{
+      top: 5vh;
+      width: 100vw;      
+    }
+
+    input, button{      
+      margin-left: auto;
+      margin-right: auto;      
+    }
+
+    .sub-heading{
+      align-self: center;
+      
+      top: 5vh;      
+    }
+
+    input{
+      width: 70%;
+    }
+
+    .main-img{
+      display: none;
+    }
+  }
+
+  
+  @media only screen and (min-width: 768px)
+  {
+    body{
+      font-size:18px ;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+
+    .form-elements{      
+      width: 45%;
+      align-items: center;
+    }
+  
+    .sub-heading{      
+      top: 10vh;
+      text-align: center;      
+    }
+     
+    .main-img{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 40vw;
+    }
+
+  }
+
+  @media only screen and (min-width: 1200px)
+  {
+    .form{
+      display: flex;    
+      justify-content: flex-end;    
+      width: 100%;
+      height: 85vh;    
+    }
+    
+    .sub-heading{      
+      top: 7vh;
+    }
+  
+    input{
+      width: 50%;
+    }
+  
+  }

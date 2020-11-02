@@ -1,4 +1,4 @@
-# Landing Page
+# Email Subscription Page
 
 ![Website Preview](./landingpage_preview.png)
 

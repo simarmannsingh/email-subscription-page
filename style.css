@@ -3,69 +3,102 @@
     --link_active: #fdfdfd;
     --accent1: #e49797;
     --accent2: #6a94e9;
-    --accent3: #4777f3;
+    --accent3: #003b77;
     --accent4: #e0777c;
-    --btn-primary: #1d5bd6;
+    --btn-primary: #5995fd;
     --btn-secondary: #e96a70;
     --text-primary: #fafafa;
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;    
-    background: linear-gradient(90deg, #4777f3, #cfcfd6);
-    height: 100vh;
+    font-family: 'Poppins', sans-serif;    
+    height: 100vh;    
   }
 
   h1, h2, h3, h4, h5, h6, p{
     color: var(--text-primary);
   }
 
+  body{
+    overflow: hidden;
+  }
+
   .App{
-    display: flex;
+    display: flex;    
     margin: auto;
     justify-content: center;
     flex-direction: column;    
     width: 90vw;
     height: 95vh;
+    
   }
 
   .form{
-    display: flex;    
-    justify-content: flex-end;    
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
-    height: 85vh;    
+    z-index: 3;    
   }
 
   .form-elements{
     display: flex;
-    position: relative;
     flex-direction: column;
-    justify-content: center;    
-    background:linear-gradient(135deg, var(--accent3), var(--accent4));    
-    border: 1px solid white
+    position: relative;
+    justify-content: center;
+    height: 70vh;
+    background-color: #003b77;
+    border-radius: 15px;
   }
 
-  .sub-heading{
-    display: flex;
-    position: absolute;
-    top: 10%;
+  .sub-heading{    
     text-align: center;
     padding: 1em;
     background: var(--accent3);
     border: 1px solid white;
   }
 
-  .NavBar{
+  .Nav-backdrop{
     display: flex;
     position: fixed;
-    top: 0;    
+    top: -100px;
+    left: -20px;
+    width: 120%;
+    height: 38vh;
+    transform: rotate(-3deg);
+    background: linear-gradient(-130deg, #4cb7ff, #106096);    
   }
 
-  input{
-    width: 50%;
-    padding: 0.5em;
-    margin: 0.5em 1em;
-    border-radius: 0.5em;
-    border: none;    
+  .Title{
+    display: flex;
+    position: fixed;
+    top: 1.2em;
   }
+
+  .input-field{
+    width: 50%;    
+    padding: 0 0.5em;
+    margin: 0.5em auto;
+    border-radius: 3em;
+    border: none;
+    background-color: #f0f0f0;
+    display: grid;
+    grid-template-columns: 10% 90%;    
+  }
+
+  .input-field i{
+    text-align: center;
+    line-height: 35px;
+    color: #acacac;
+    font-size: 1.1rem;
+    transition: 0.5s;
+}
+
+.input-field input{
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #333;
+}
 
   input:focus{
     outline: none;
@@ -76,11 +109,21 @@
     background-color: var(--btn-primary);
     color: var(--text-primary);
     font-size: medium;
-    border-radius: 0.6em;
+    border-radius: 3em;
     border: none;
     cursor: pointer;
     margin: 1em;
     width: fit-content;
+  }
+
+  .wave{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: -70px;
+    left: 0;
+    z-index: 1;
+    opacity: 70%;
   }
 
   @media screen and (max-width: 345px){
@@ -90,6 +133,10 @@
 
     .form{
       justify-content: center;
+    }
+
+    .wave{
+      bottom: 0px;
     }
 
     .form-elements{
@@ -126,6 +173,10 @@
 
     .form{
       justify-content: center;
+    }
+
+    .wave{
+      bottom: -5px;
     }
 
     .form-elements{
@@ -191,6 +242,10 @@
       height: 85vh;    
     }
     
+    .wave{
+      bottom: -70px;
+    }
+
     .sub-heading{      
       top: 7vh;
     }

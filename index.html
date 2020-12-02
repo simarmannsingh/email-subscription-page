@@ -8,33 +8,53 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Loading Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Loading FontAwesome fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     <title>Email Subscription Form</title>
 </head>
 <body>
     <div class="App">
         
-        <!-- NavBar -->
-        <div class="NavBar">
+        <div class="Nav-backdrop"></div>
+        
+        <div class="Title">
             <h1>Email Subscription Form</h1>
         </div>
 
         <div class="main-img">
-            <img src="./spaceship.svg" alt="Email Image">
+            <img src="./spaceship.svg" alt="Email Image" crossorigin="anonymous"> 
         </div>
 
         <!-- Form For collecting user Details -->
         <form class="form">
             <div class="form-elements">
                 <h3 class="sub-heading"> Subscribe to our mailing list <br> to never miss any opportunity</h3>
-                <input type="text" name="firstName" placeholder="First Name">
-                <input type="text" name="lastName" placeholder="Last Name">
-                <input type="email" name="email" id="email" placeholder="email@example.com">
+                
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="firstName" placeholder="First Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="lastName" placeholder="Last Name">
+                </div>
+                
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" id="email" placeholder="Email Adress">
+                </div>
+                
                 <button type="submit">Submit</button>
             </div>
-
         </form>
+        
+        <!-- Wave -->
+        <img class="wave" src="wave.svg" alt="Wave">
+        
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,6 +1,6 @@
 # Email Subscription Page
 
-![Website Preview](./landingpage_preview.png)
+![Website Preview](./email_subscription.png)
 
 ## Introduction
 This is a fully-responsive Email subscription Landing page. The form has frontend part in this repository. The backend can be added in a similar manner as the Repository which sends an email using NodeMailer.
